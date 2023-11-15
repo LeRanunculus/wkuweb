@@ -1,0 +1,694 @@
+<style>
+    .wrap { 
+        background-color:rgba(255, 255, 255, 1);
+        width:1440px;
+        height:1024px;
+        position:absolute;
+    }
+    #header{
+        width:1440px;
+        height:120px;
+    }
+    .e9_10 { 
+        text-decoration: none;
+        color:rgba(0, 0, 0, 1);
+        width:300px;
+        height:100px;
+        position:absolute;
+        left:570px;
+        top:20px;
+        font-family:Inter;
+        text-align:left;
+        font-size:75px;
+        letter-spacing:0;
+    }
+    .loginbox { 
+        border: 3px solid rgba(255, 168.30000668764114, 0, 1);
+        width:179px;
+        height:757px;
+        position:absolute;
+        left:144px;
+        top:122px;
+    }
+    .ei104_215_9_24 { 
+        background-color:rgba(0, 0, 0, 1);
+        width:179px;
+        height:757px;
+        position:absolute;
+        left:0px;
+        top:0px;
+    }
+    .i104_215_9_24 { 
+        border:6px solid rgba(255, 168.30000668764114, 0, 1);
+    }
+    .ei104_215_13_31 { 
+        background-color:rgba(255, 168.30000668764114, 0, 1);
+        width:153px;
+        height:48px;
+        position:absolute;
+        left:12px;
+        top:36px;
+    }
+    .ei104_215_13_32 { 
+        background-color:rgba(255, 168.30000668764114, 0, 1);
+        width:153px;
+        height:48px;
+        position:absolute;
+        left:12px;
+        top:105px;
+    }
+    .menubox33{
+        background-color:rgba(255, 168.30000668764114, 0, 1);
+        width:153px;
+        height:48px;
+        position:absolute;
+        left:12px;
+        top:174px;
+    }
+    .menubox34{
+        background-color:rgba(255, 168.30000668764114, 0, 1);
+        width:153px;
+        height:48px;
+        position:absolute;
+        left:12px;
+        top:243px; 
+    }
+    .menubox35{
+        background-color:rgba(255, 168.30000668764114, 0, 1);
+        width:153px;
+        height:48px;
+        position:absolute;
+        left:12px;
+        top:312px; 
+    }
+    .menubox36{
+        background-color:rgba(255, 168.30000668764114, 0, 1);
+        width:153px;
+        height:48px;
+        position:absolute;
+        left:12px;
+        top:381px; 
+    }
+    .menubox37{
+        background-color:rgba(255, 168.30000668764114, 0, 1);
+        width:153px;
+        height:48px;
+        position:absolute;
+        left:12px;
+        top:450px; 
+    }
+    
+    .ei104_215_13_33 { 
+        text-decoration: none;
+        color:rgba(0, 0, 0, 1);
+        width:111px;
+        height:48px;
+        position:absolute;
+        left:33px;
+        top:36px;
+        font-family:Inter;
+        text-align:left;
+        font-size:40px;
+        letter-spacing:0;
+    }
+    .ei104_215_13_34 { 
+        text-decoration: none;
+        color:rgba(0, 0, 0, 1);
+        width:160px;
+        height:48px;
+        position:absolute;
+        left:16px;
+        top:105px;
+        font-family:Inter;
+        text-align:left;
+        font-size:40px;
+        letter-spacing:0;
+    }
+    .servicebt{
+        text-decoration: none;
+        color:rgba(0, 0, 0, 1);
+        width:160px;
+        height:48px;
+        position:absolute;
+        left:33px;
+        top:174px;
+        font-family:Inter;
+        text-align:left;
+        font-size:40px;
+        letter-spacing:0;
+    }
+    .combt{
+        text-decoration: none;
+        color:rgba(0, 0, 0, 1);
+        width:160;
+        height:48px;
+        position:absolute;
+        left:16px;
+        top:243px;
+        font-family:Inter;
+        text-align:left;
+        font-size:40px;
+        letter-spacing:0;
+    }
+    .noticebt{
+        text-decoration: none;
+        color:rgba(0, 0, 0, 1);
+        width:160;
+        height:48px;
+        position:absolute;
+        left:16px;
+        top:312px;
+        font-family:Inter;
+        text-align:left;
+        font-size:40px;
+        letter-spacing:0;
+    }
+    .mypagebt{
+        text-decoration: none;
+        color:rgba(0, 0, 0, 1);
+        width:160;
+        height:48px;
+        position:absolute;
+        left:16px;
+        top:381px;
+        font-family:Inter;
+        text-align:left;
+        font-size:34px;
+        letter-spacing:0;
+    }
+    .aboutbt{
+        text-decoration: none;
+        color:rgba(0, 0, 0, 1);
+        width:160;
+        height:48px;
+        position:absolute;
+        left:50px;
+        top:450px;
+        font-family:Inter;
+        text-align:left;
+        font-size:40px;
+        letter-spacing:0;
+    }
+    
+    .excol { 
+        border: 3px solid black;
+        width:650px;
+        height:757px;
+        position:absolute;
+        left:346px;
+        top:122px;
+    }
+    .exNames {
+        /* border: 3px solid black; */
+        width: 640px;
+        height: 50;
+        position: relative;
+        text-align: center;
+        left: 2px;
+        top: 5;
+        font-size: 35px;
+        display: none;
+    }
+    .eximg{
+        /* border: 3px solid red; */
+        width: 640px;
+        height: 500px;
+        position: relative;
+        left: 2px;
+        top: 2px;
+    }
+    .exFields {
+        border: 3px solid black;
+        width: 640px;
+        height: 170px;
+        position: relative;
+        left: 2px;
+        top: 26px;
+    }
+    .exleft{
+        /* border: 3px solid blue; */
+        float: left; width: 8%;
+        height: inherit;
+    }
+    /* slideshow 컨테이너의 디자인 */
+    .slideshow-container{
+        /* * {box-sizing:border-box}  */
+        float: left; width: 78%;
+        position: relative;
+        left: 20px;
+        height: inherit;
+        margin: auto;
+    }
+
+    /* 이미지를 숨기는데 사용 */
+    .mySlides {
+    display: none;
+}
+.exFields {
+    display: none;
+}
+
+/* 다음, 이전 버튼 */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 60px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+/* "다음 버튼"을 오른쪽에 위치 */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* 마우스를 올리면 배경색을 변경 */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* 캡션 부분 */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+/* 숫자 부분 위에 적은 (1/3) <-- 이런거 */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* 하단의 점들 */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+/* 페이드 효과 */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+    .eximgcontent{
+        /* width:100%; */
+        height:100%;
+        object-fit:inherit;
+    }
+    .exright{
+        /* border: 3px solid blue; */
+        float: right; width: 8%;
+        height: inherit;
+    }
+    .ei104_149_9_13 { 
+        background-color:rgba(255, 168.30000668764114, 0, 1);
+        width:650px;
+        height:757px;
+        position:absolute;
+        left:0px;
+        top:0px;
+    }
+    .ei104_149_9_14 { 
+        background-color:rgba(255, 255, 255, 1);
+        width:171px;
+        height:258px;
+        position:absolute;
+        left:29px;
+        top:90px;
+    }
+    .ei104_149_9_15 { 
+        background-color:rgba(255, 255, 255, 1);
+        width:171px;
+        height:258px;
+        position:absolute;
+        left:240px;
+        top:90px;
+    }
+    .ei104_149_9_16 { 
+        background-color:rgba(255, 255, 255, 1);
+        width:171px;
+        height:258px;
+        position:absolute;
+        left:450px;
+        top:90px;
+    }
+    .ei104_149_9_21 { 
+        color:rgba(0, 0, 0, 1);
+        width:74px;
+        height:48px;
+        position:absolute;
+        left:291px;
+        top:26px;
+        font-family:Inter;
+        text-align:left;
+        font-size:40px;
+        letter-spacing:0;
+    }
+    .ei104_149_23_6 { 
+        width:67px;
+        height:76px;
+        position:absolute;
+        left:293px;
+        top:375px;
+    }
+    .ei104_149_23_9 { 
+        color:rgba(0, 0, 0, 1);
+        width:67px;
+        height:29px;
+        position:absolute;
+        left:0px;
+        top:47px;
+        font-family:Inter;
+        text-align:left;
+        font-size:24px;
+        letter-spacing:0;
+    }
+    .ei104_149_104_17 { 
+        /* background-color:rgba(0, 0, 0, 1); */
+        background-image: url(/iconsplus/plus50.png);
+        width:53px;
+        height:47px;
+        position:absolute;
+        left:6px;
+        top:0px;
+    }
+    .communitycol { 
+        /* border: 3px solid red; */
+        width:272px;
+        height:192px;
+        position:absolute;
+        left:380px;
+        top:650px;
+    }
+    .noticecol { 
+        /* border: 3px solid red; */
+        width:272px;
+        height:192px;
+        position:absolute;
+        left:700px;
+        top:650px;
+    }
+    .ei104_190_13_37 { 
+        border: 3px solid black;
+        background-color:rgba(255, 168.30000668764114, 0, 1);
+        width:272px;
+        height:48px;
+        position:absolute;
+        left:0px;
+        top:0px;
+    }
+    .ei104_190_13_38 { 
+        
+        color:rgba(0, 0, 0, 1);
+        width:118px;
+        height:39px;
+        position:absolute;
+        left:77px;
+        top:5px;
+        font-family:Inter;
+        text-align:left;
+        font-size:32px;
+        letter-spacing:0;
+    }
+    .ei104_190_13_40 { 
+        color:rgba(0, 0, 0, 1);
+        width:81px;
+        height:116px;
+        position:absolute;
+        left:7px;
+        top:76px;
+        font-family:Inter;
+        text-align:left;
+        font-size:24px;
+        letter-spacing:0;
+    }
+    
+    .ei104_186_13_41 { 
+        border: 3px solid black;
+        background-color:rgba(255, 168.30000668764114, 0, 1);
+        width:272px;
+        height:48px;
+        position:absolute;
+        left:0px;
+        top:3px;
+    }
+    .ei104_186_13_42 { 
+        color:rgba(0, 0, 0, 1);
+        width:133px;
+        height:44px;
+        position:absolute;
+        left:69px;
+        top:5px;
+        font-family:Inter;
+        text-align:left;
+        font-size:36px;
+        letter-spacing:0;
+    }
+    .ei104_186_13_43 { 
+        color:rgba(0, 0, 0, 1);
+        width:81px;
+        height:116px;
+        position:absolute;
+        left:7px;
+        top:76px;
+        font-family:Inter;
+        text-align:left;
+        font-size:24px;
+        letter-spacing:0;
+    }
+    .e101_6 { 
+        border: 3px solid black;
+        width:86px;
+        height:225px;
+        position:absolute;
+        left:1030px;
+        top:650px;
+    }
+    .ei101_6_107_117 { 
+        background-color:rgba(255, 168.30000668764114, 0, 1);
+        width:86px;
+        height:225px;
+        position:absolute;
+        left:0px;
+        top:0px;
+    }
+    .ei101_6_23_14 { 
+        color:rgba(0, 0, 0, 1);
+        width:45px;
+        height:29px;
+        position:absolute;
+        left:20px;
+        top:196px;
+        font-family:Inter;
+        text-align:left;
+        font-size:24px;
+        letter-spacing:0;
+    }
+    .ei101_6_23_15 { 
+        color:rgba(0, 0, 0, 1);
+        width:45px;
+        height:29px;
+        position:absolute;
+        left:20px;
+        top:80px;
+        font-family:Inter;
+        text-align:left;
+        font-size:24px;
+        letter-spacing:0;
+    }
+    .ei101_6_23_16 { 
+        border-radius:500px;
+        background-color:rgba(255, 255, 255, 1);
+        width:71px;
+        height:73px;
+        position:absolute;
+        left:7px;
+        top:126px;
+    }
+    .ei101_6_23_17 { 
+        border-radius:500px;
+        background-color:rgba(255, 255, 255, 1);
+        width:71px;
+        height:73px;
+        position:absolute;
+        left:7px;
+        top:10px;
+    }
+    .ei101_6_95_2 { 
+        width:58px;
+        height:58px;
+        position:absolute;
+        left:13px;
+        top:18px;
+        background-image:url(/iconsplus/mike50.png);
+        background-repeat:no-repeat;
+        background-size:cover;
+    }
+    .ei101_6_95_3 { 
+        width:58px;
+        height:58px;
+        position:absolute;
+        left:13px;
+        top:134px;
+        background-image:url(/iconsplus/questionmark50.png);
+        background-repeat:no-repeat;
+        background-size:cover;
+    }
+    
+    </style>
+    <div class=wrap>
+        <header id="header" style="display: flex;">
+            <a href="main2.html"  class="e9_10">For All</a>
+        </header>
+        <div id="maincol">
+        <div class=loginbox>
+          <div class="ei104_215_9_24"></div>
+          <div class="ei104_215_13_31"></div>
+          <div class="ei104_215_13_32"></div>
+          <div class="menubox33"></div>
+          <div class="menubox34"></div>
+          <div class="menubox35"></div>
+          <div class="menubox36"></div>
+          <div class="menubox37"></div>
+          <a  href='login2.html' class="ei104_215_13_33">로그인</a>
+          <a href="login2.html"  class="ei104_215_13_34">회원가입</a>
+          <a  href='#' class="servicebt">서비스</a>
+          <a  href='ex.html' class="combt">커뮤니티</a>
+          <a href="#"  class="noticebt">공지사항</a>
+          <a href="#"  class="mypagebt">마이페이지</a>
+          <a href="#"  class="aboutbt">소개</a>
+
+        </div>
+        <div class="excol">
+            <div class="exNames">제목설명1</div>
+            <div class="exNames">제목설명2</div>
+            <div class="exNames">제목설명3</div>
+            <div class="eximg">
+                <div class="exleft">
+                    <a class="prev" onclick="plusSlides(-1)" >&#10094;</a>
+                </div>
+                <!--슬라이드쇼 컨테이너-->
+                <div class="slideshow-container"> 
+                    <!-- 컨테이너이미지들-->
+                    <div class="mySlides fade">
+                        <!-- <div class="numbertext">1 / 3</div> -->
+                        <img src="/img/키오스크1.png" style="width: 100%; height: 100%;" alt="kiosk">
+                        <!-- <div class="text">첫 번째 사진</div> -->
+                    </div>
+
+                    <div class="mySlides fade">
+                        <!-- <div class="numbertext">2 / 3</div> -->
+                        <img src="/img/card1.jpg" style="width: 100%; height: 100%;" alt="kiosk">
+                        <!-- <div class="text">두 번째 사진</div> -->
+                    </div>
+
+                    <div class="mySlides fade">
+                        <!-- <div class="numbertext">3 / 3</div> -->
+                        <img src="/img/card2.jpg" style="width: 100%; height: 100%;" alt="kiosk">
+                        <!-- <div class="text">세 번째 사진</div> -->
+                    </div>
+                    <!-- 현재 이미지를 알려주는 하단의 점 -->
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1)"></span> 
+                            <span class="dot" onclick="currentSlide(2)"></span> 
+                            <span class="dot" onclick="currentSlide(3)"></span> 
+                        </div>
+                </div>
+                <!--다음, 이전 이미지 버튼-->
+                <div class="exright">
+                    <a class="next" onclick="plusSlides(1)" >&#10095;</a>
+                </div>
+                
+            </div>
+            <div class="exFields">설명란1</div>
+            <div class="exFields">설명란2</div>
+            <div class="exFields">설명란3</div>
+           
+    </div>
+    <div id="rightcol">
+        <div class=e101_6>
+            <div class="ei101_6_107_117"></div><span  class="ei101_6_23_14">도움</span><span  class="ei101_6_23_15">음성</span>
+            <div class="ei101_6_23_16"></div>
+            <div class="ei101_6_23_17"></div>
+            <div class="ei101_6_95_2"></div>
+            <div class="ei101_6_95_3"></div>
+          </div>
+    </div>
+      </div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// 다음, 이전 제어
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// 사진 제어
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var exfields = document.getElementsByClassName("exFields");
+  var exnames = document.getElementsByClassName("exNames");
+  var dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+
+  if (n > exfields.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < exfields.length; i++) {
+      exfields[i].style.display = "none"; 
+  }
+
+  if (n > exnames.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < exnames.length; i++) {
+      exnames[i].style.display = "none"; 
+  }
+
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  exfields[slideIndex-1].style.display = "block"; 
+  exnames[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+      </script>

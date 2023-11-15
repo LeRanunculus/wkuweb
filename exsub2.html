@@ -1,0 +1,550 @@
+<style>
+    .wrap { 
+        background-color:rgba(255, 255, 255, 1);
+        width:1440px;
+        height:1024px;
+        position:absolute;
+    }
+    #header{
+        width:1440px;
+        height:120px;
+    }
+    .e9_10 { 
+        text-decoration: none;
+        color:rgba(0, 0, 0, 1);
+        width:300px;
+        height:100px;
+        position:absolute;
+        left:570px;
+        top:20px;
+        font-family:Inter;
+        text-align:left;
+        font-size:75px;
+        letter-spacing:0;
+    }
+    .loginbox { 
+        border: 3px solid rgba(255, 168.30000668764114, 0, 1);
+        width:179px;
+        height:757px;
+        position:absolute;
+        left:144px;
+        top:122px;
+    }
+    .ei104_215_9_24 { 
+        background-color:rgba(0, 0, 0, 1);
+        width:179px;
+        height:757px;
+        position:absolute;
+        left:0px;
+        top:0px;
+    }
+    .i104_215_9_24 { 
+        border:6px solid rgba(255, 168.30000668764114, 0, 1);
+    }
+    .ei104_215_13_31 { 
+        background-color:rgba(255, 168.30000668764114, 0, 1);
+        width:153px;
+        height:48px;
+        position:absolute;
+        left:12px;
+        top:36px;
+    }
+    .ei104_215_13_32 { 
+        background-color:rgba(255, 168.30000668764114, 0, 1);
+        width:153px;
+        height:48px;
+        position:absolute;
+        left:12px;
+        top:105px;
+    }
+    .menubox33{
+        background-color:rgba(255, 168.30000668764114, 0, 1);
+        width:153px;
+        height:48px;
+        position:absolute;
+        left:12px;
+        top:174px;
+    }
+    .menubox34{
+        background-color:rgba(255, 168.30000668764114, 0, 1);
+        width:153px;
+        height:48px;
+        position:absolute;
+        left:12px;
+        top:243px; 
+    }
+    .menubox35{
+        background-color:rgba(255, 168.30000668764114, 0, 1);
+        width:153px;
+        height:48px;
+        position:absolute;
+        left:12px;
+        top:312px; 
+    }
+    .menubox36{
+        background-color:rgba(255, 168.30000668764114, 0, 1);
+        width:153px;
+        height:48px;
+        position:absolute;
+        left:12px;
+        top:381px; 
+    }
+    .menubox37{
+        background-color:rgba(255, 168.30000668764114, 0, 1);
+        width:153px;
+        height:48px;
+        position:absolute;
+        left:12px;
+        top:450px; 
+    }
+    
+    .ei104_215_13_33 { 
+        text-decoration: none;
+        color:rgba(0, 0, 0, 1);
+        width:111px;
+        height:48px;
+        position:absolute;
+        left:33px;
+        top:36px;
+        font-family:Inter;
+        text-align:left;
+        font-size:40px;
+        letter-spacing:0;
+    }
+    .ei104_215_13_34 { 
+        text-decoration: none;
+        color:rgba(0, 0, 0, 1);
+        width:160px;
+        height:48px;
+        position:absolute;
+        left:16px;
+        top:105px;
+        font-family:Inter;
+        text-align:left;
+        font-size:40px;
+        letter-spacing:0;
+    }
+    .servicebt{
+        text-decoration: none;
+        color:rgba(0, 0, 0, 1);
+        width:160px;
+        height:48px;
+        position:absolute;
+        left:33px;
+        top:174px;
+        font-family:Inter;
+        text-align:left;
+        font-size:40px;
+        letter-spacing:0;
+    }
+    .combt{
+        text-decoration: none;
+        color:rgba(0, 0, 0, 1);
+        width:160;
+        height:48px;
+        position:absolute;
+        left:16px;
+        top:243px;
+        font-family:Inter;
+        text-align:left;
+        font-size:40px;
+        letter-spacing:0;
+    }
+    .noticebt{
+        text-decoration: none;
+        color:rgba(0, 0, 0, 1);
+        width:160;
+        height:48px;
+        position:absolute;
+        left:16px;
+        top:312px;
+        font-family:Inter;
+        text-align:left;
+        font-size:40px;
+        letter-spacing:0;
+    }
+    .mypagebt{
+        text-decoration: none;
+        color:rgba(0, 0, 0, 1);
+        width:160;
+        height:48px;
+        position:absolute;
+        left:16px;
+        top:381px;
+        font-family:Inter;
+        text-align:left;
+        font-size:34px;
+        letter-spacing:0;
+    }
+    .aboutbt{
+        text-decoration: none;
+        color:rgba(0, 0, 0, 1);
+        width:160;
+        height:48px;
+        position:absolute;
+        left:50px;
+        top:450px;
+        font-family:Inter;
+        text-align:left;
+        font-size:40px;
+        letter-spacing:0;
+    }
+    
+    .excol { 
+        border: 3px solid black;
+        width:650px;
+        height:757px;
+        position:absolute;
+        left:346px;
+        top:122px;
+    }
+    .exname{
+        /* border: 3px solid black; */
+        width: 640px;
+        height: 50;
+        position: relative;
+        text-align: center;
+        left: 2px;
+        top: 5;
+        font-size: 35px;
+    }
+    .eximg{
+        /* border: 3px solid red; */
+        width: 640px;
+        height: 500px;
+        position: relative;
+        left: 2px;
+        top: 2px;
+    }
+    .exfield{
+        border: 3px solid yellow;
+        width: 640px;
+        height: 180px;
+        position: relative;
+        left: 2px;
+        top: 2px;
+    }
+    .exleft{
+        /* border: 3px solid blue; */
+        float: left; width: 8%;
+        height: inherit;
+    }
+    .eximgfield{
+        /* border: 3px solid blue; */
+        float: left; width: 78%;
+        position: relative;
+        left: 20px;
+        height: inherit;
+    }
+    .eximgcontent{
+        width:100%;
+        height:100%;
+        object-fit:inherit;
+    }
+    .exright{
+        /* border: 3px solid blue; */
+        float: right; width: 8%;
+        height: inherit;
+    }
+    .exnextbt{
+        position: relative;
+        top: 45%;
+        right: 13;
+        /* border: none;
+        background: no-repeat;  */
+    }
+    .exbeforebt{
+        position: relative;
+        top: 45%;
+        left: 1.5;
+        border: none;
+        background:  no-repeat; 
+    }
+    .ei104_149_9_13 { 
+        background-color:rgba(255, 168.30000668764114, 0, 1);
+        width:650px;
+        height:757px;
+        position:absolute;
+        left:0px;
+        top:0px;
+    }
+    .ei104_149_9_14 { 
+        background-color:rgba(255, 255, 255, 1);
+        width:171px;
+        height:258px;
+        position:absolute;
+        left:29px;
+        top:90px;
+    }
+    .ei104_149_9_15 { 
+        background-color:rgba(255, 255, 255, 1);
+        width:171px;
+        height:258px;
+        position:absolute;
+        left:240px;
+        top:90px;
+    }
+    .ei104_149_9_16 { 
+        background-color:rgba(255, 255, 255, 1);
+        width:171px;
+        height:258px;
+        position:absolute;
+        left:450px;
+        top:90px;
+    }
+    .ei104_149_9_21 { 
+        color:rgba(0, 0, 0, 1);
+        width:74px;
+        height:48px;
+        position:absolute;
+        left:291px;
+        top:26px;
+        font-family:Inter;
+        text-align:left;
+        font-size:40px;
+        letter-spacing:0;
+    }
+    .ei104_149_23_6 { 
+        width:67px;
+        height:76px;
+        position:absolute;
+        left:293px;
+        top:375px;
+    }
+    .ei104_149_23_9 { 
+        color:rgba(0, 0, 0, 1);
+        width:67px;
+        height:29px;
+        position:absolute;
+        left:0px;
+        top:47px;
+        font-family:Inter;
+        text-align:left;
+        font-size:24px;
+        letter-spacing:0;
+    }
+    .ei104_149_104_17 { 
+        /* background-color:rgba(0, 0, 0, 1); */
+        background-image: url(/iconsplus/plus50.png);
+        width:53px;
+        height:47px;
+        position:absolute;
+        left:6px;
+        top:0px;
+    }
+    .communitycol { 
+        /* border: 3px solid red; */
+        width:272px;
+        height:192px;
+        position:absolute;
+        left:380px;
+        top:650px;
+    }
+    .noticecol { 
+        /* border: 3px solid red; */
+        width:272px;
+        height:192px;
+        position:absolute;
+        left:700px;
+        top:650px;
+    }
+    .ei104_190_13_37 { 
+        border: 3px solid black;
+        background-color:rgba(255, 168.30000668764114, 0, 1);
+        width:272px;
+        height:48px;
+        position:absolute;
+        left:0px;
+        top:0px;
+    }
+    .ei104_190_13_38 { 
+        
+        color:rgba(0, 0, 0, 1);
+        width:118px;
+        height:39px;
+        position:absolute;
+        left:77px;
+        top:5px;
+        font-family:Inter;
+        text-align:left;
+        font-size:32px;
+        letter-spacing:0;
+    }
+    .ei104_190_13_40 { 
+        color:rgba(0, 0, 0, 1);
+        width:81px;
+        height:116px;
+        position:absolute;
+        left:7px;
+        top:76px;
+        font-family:Inter;
+        text-align:left;
+        font-size:24px;
+        letter-spacing:0;
+    }
+    
+    .ei104_186_13_41 { 
+        border: 3px solid black;
+        background-color:rgba(255, 168.30000668764114, 0, 1);
+        width:272px;
+        height:48px;
+        position:absolute;
+        left:0px;
+        top:3px;
+    }
+    .ei104_186_13_42 { 
+        color:rgba(0, 0, 0, 1);
+        width:133px;
+        height:44px;
+        position:absolute;
+        left:69px;
+        top:5px;
+        font-family:Inter;
+        text-align:left;
+        font-size:36px;
+        letter-spacing:0;
+    }
+    .ei104_186_13_43 { 
+        color:rgba(0, 0, 0, 1);
+        width:81px;
+        height:116px;
+        position:absolute;
+        left:7px;
+        top:76px;
+        font-family:Inter;
+        text-align:left;
+        font-size:24px;
+        letter-spacing:0;
+    }
+    .e101_6 { 
+        border: 3px solid black;
+        width:86px;
+        height:225px;
+        position:absolute;
+        left:1030px;
+        top:650px;
+    }
+    .ei101_6_107_117 { 
+        background-color:rgba(255, 168.30000668764114, 0, 1);
+        width:86px;
+        height:225px;
+        position:absolute;
+        left:0px;
+        top:0px;
+    }
+    .ei101_6_23_14 { 
+        color:rgba(0, 0, 0, 1);
+        width:45px;
+        height:29px;
+        position:absolute;
+        left:20px;
+        top:196px;
+        font-family:Inter;
+        text-align:left;
+        font-size:24px;
+        letter-spacing:0;
+    }
+    .ei101_6_23_15 { 
+        color:rgba(0, 0, 0, 1);
+        width:45px;
+        height:29px;
+        position:absolute;
+        left:20px;
+        top:80px;
+        font-family:Inter;
+        text-align:left;
+        font-size:24px;
+        letter-spacing:0;
+    }
+    .ei101_6_23_16 { 
+        border-radius:500px;
+        background-color:rgba(255, 255, 255, 1);
+        width:71px;
+        height:73px;
+        position:absolute;
+        left:7px;
+        top:126px;
+    }
+    .ei101_6_23_17 { 
+        border-radius:500px;
+        background-color:rgba(255, 255, 255, 1);
+        width:71px;
+        height:73px;
+        position:absolute;
+        left:7px;
+        top:10px;
+    }
+    .ei101_6_95_2 { 
+        width:58px;
+        height:58px;
+        position:absolute;
+        left:13px;
+        top:18px;
+        background-image:url(/iconsplus/mike50.png);
+        background-repeat:no-repeat;
+        background-size:cover;
+    }
+    .ei101_6_95_3 { 
+        width:58px;
+        height:58px;
+        position:absolute;
+        left:13px;
+        top:134px;
+        background-image:url(/iconsplus/questionmark50.png);
+        background-repeat:no-repeat;
+        background-size:cover;
+    }
+    
+    </style>
+    <div class=wrap>
+        <header id="header" style="display: flex;">
+            <a href="main.html"  class="e9_10">For All</a>
+        </header>
+        <div id="maincol">
+        <div class=loginbox>
+          <div class="ei104_215_9_24"></div>
+          <div class="ei104_215_13_31"></div>
+          <div class="ei104_215_13_32"></div>
+          <div class="menubox33"></div>
+          <div class="menubox34"></div>
+          <div class="menubox35"></div>
+          <div class="menubox36"></div>
+          <div class="menubox37"></div>
+          <a  href='login2.html' class="ei104_215_13_33">로그인</a>
+          <a href="login2.html"  class="ei104_215_13_34">회원가입</a>
+          <a  href='#' class="servicebt">서비스</a>
+          <a  href='ex.html' class="combt">커뮤니티</a>
+          <a href="#"  class="noticebt">공지사항</a>
+          <a href="#"  class="mypagebt">마이페이지</a>
+          <a href="#"  class="aboutbt">소개</a>
+
+        </div>
+        <div class="excol">
+            <div class="exname">제목설명</div>
+            <div class="eximg">
+                <div class="exleft">
+                    <button type="button" onclick="alert('Hi')" class="exbeforebt"><img src="/iconsplus/leftone50.png"/>이전</button>
+                </div>
+                <div class="eximgfield">
+                    <img class="eximgcontent"
+                         src="/image/키오스크1.png"
+                         alt="kiosk">/>
+                </div>
+                <div class="exright">
+                    <button  type="button" onclick="alert('Hi')" class="exnextbt"><img src="/iconsplus/rightone50.png"/>다음</button>
+                </div>
+                
+            </div>
+            <div class="exfield">설명란</div>
+           
+    </div>
+    <div id="rightcol">
+        <div class=e101_6>
+            <div class="ei101_6_107_117"></div><span  class="ei101_6_23_14">도움</span><span  class="ei101_6_23_15">음성</span>
+            <div class="ei101_6_23_16"></div>
+            <div class="ei101_6_23_17"></div>
+            <div class="ei101_6_95_2"></div>
+            <div class="ei101_6_95_3"></div>
+          </div>
+    </div>
+      </div>
