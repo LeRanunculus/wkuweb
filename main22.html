@@ -1,13 +1,23 @@
 <style>
+    /* .wrap { 
+        overflow:hidden;
+    } */
     .wrap { 
         background-color:rgba(255, 255, 255, 1);
         width:1440px;
         height:1024px;
         position:absolute;
     }
+    #maincol{
+        width: 1440px;
+        height: 904px;
+        display: flex;
+    }
     #header{
         width:1440px;
         height:120px;
+        display: flex;
+        /* border: 3px solid blue; */
     }
     .e9_10 { 
         text-decoration: none;
@@ -37,9 +47,6 @@
         position:absolute;
         left:0px;
         top:0px;
-    }
-    .i104_215_9_24 { 
-        border:6px solid rgba(255, 168.30000668764114, 0, 1);
     }
     .ei104_215_13_31 { 
         background-color:rgba(255, 168.30000668764114, 0, 1);
@@ -198,68 +205,6 @@
         left:346px;
         top:122px;
     }
-    .exname{
-        /* border: 3px solid black; */
-        width: 640px;
-        height: 50;
-        position: relative;
-        text-align: center;
-        left: 2px;
-        top: 5;
-        font-size: 35px;
-    }
-    .eximg{
-        /* border: 3px solid red; */
-        width: 640px;
-        height: 500px;
-        position: relative;
-        left: 2px;
-        top: 2px;
-    }
-    .exfield{
-        border: 3px solid yellow;
-        width: 640px;
-        height: 180px;
-        position: relative;
-        left: 2px;
-        top: 2px;
-    }
-    .exleft{
-        /* border: 3px solid blue; */
-        float: left; width: 8%;
-        height: inherit;
-    }
-    .eximgfield{
-        /* border: 3px solid blue; */
-        float: left; width: 78%;
-        position: relative;
-        left: 20px;
-        height: inherit;
-    }
-    .eximgcontent{
-        width:100%;
-        height:100%;
-        object-fit:inherit;
-    }
-    .exright{
-        /* border: 3px solid blue; */
-        float: right; width: 8%;
-        height: inherit;
-    }
-    .exnextbt{
-        position: relative;
-        top: 45%;
-        right: 13;
-        /* border: none;
-        background: no-repeat;  */
-    }
-    .exbeforebt{
-        position: relative;
-        top: 45%;
-        left: 1.5;
-        border: none;
-        background:  no-repeat; 
-    }
     .ei104_149_9_13 { 
         background-color:rgba(255, 168.30000668764114, 0, 1);
         width:650px;
@@ -268,7 +213,7 @@
         left:0px;
         top:0px;
     }
-    .ei104_149_9_14 { 
+    .exone { 
         background-color:rgba(255, 255, 255, 1);
         width:171px;
         height:258px;
@@ -276,7 +221,7 @@
         left:29px;
         top:90px;
     }
-    .ei104_149_9_15 { 
+    .extwo { 
         background-color:rgba(255, 255, 255, 1);
         width:171px;
         height:258px;
@@ -284,7 +229,7 @@
         left:240px;
         top:90px;
     }
-    .ei104_149_9_16 { 
+    .exthree { 
         background-color:rgba(255, 255, 255, 1);
         width:171px;
         height:258px;
@@ -309,7 +254,7 @@
         height:76px;
         position:absolute;
         left:293px;
-        top:375px;
+        top:320px;
     }
     .ei104_149_23_9 { 
         color:rgba(0, 0, 0, 1);
@@ -322,10 +267,15 @@
         text-align:left;
         font-size:24px;
         letter-spacing:0;
+        text-decoration: none;
+    }
+    .extra{
+        position: relative;
+        right: 5px;
     }
     .ei104_149_104_17 { 
         /* background-color:rgba(0, 0, 0, 1); */
-        background-image: url(/iconsplus/plus50.png);
+        /* background-image: url(/iconsplus/plus50.png); */
         width:53px;
         height:47px;
         position:absolute;
@@ -341,7 +291,7 @@
         top:650px;
     }
     .noticecol { 
-        /* border: 3px solid red; */
+        /* border: 3px ridge black; */
         width:272px;
         height:192px;
         position:absolute;
@@ -375,8 +325,7 @@
         width:81px;
         height:116px;
         position:absolute;
-        left:7px;
-        top:76px;
+        top:50px;
         font-family:Inter;
         text-align:left;
         font-size:24px;
@@ -409,8 +358,7 @@
         width:81px;
         height:116px;
         position:absolute;
-        left:7px;
-        top:76px;
+        top:50px;
         font-family:Inter;
         text-align:left;
         font-size:24px;
@@ -497,8 +445,8 @@
     
     </style>
     <div class=wrap>
-        <header id="header" style="display: flex;">
-            <a href="main.html"  class="e9_10">For All</a>
+        <header id="header">
+            <a href="main2.html"  class="e9_10">For All</a>
         </header>
         <div id="maincol">
         <div class=loginbox>
@@ -512,31 +460,40 @@
           <div class="menubox37"></div>
           <a  href='login2.html' class="ei104_215_13_33">로그인</a>
           <a href="login2.html"  class="ei104_215_13_34">회원가입</a>
-          <a  href='#' class="servicebt">서비스</a>
-          <a  href='ex.html' class="combt">커뮤니티</a>
-          <a href="#"  class="noticebt">공지사항</a>
-          <a href="#"  class="mypagebt">마이페이지</a>
-          <a href="#"  class="aboutbt">소개</a>
-
+          <a  href='exsub4.html' class="servicebt">서비스</a>
+          <a  href='com2.html' class="combt">커뮤니티</a>
+          <a href="notice.html"  class="noticebt">공지사항</a>
+          <a href="my2.html"  class="mypagebt">마이페이지</a>
+          <a href="about.html"  class="aboutbt">소개</a>
         </div>
         <div class="excol">
-            <div class="exname">제목설명</div>
-            <div class="eximg">
-                <div class="exleft">
-                    <button type="button" onclick="alert('Hi')" class="exbeforebt"><img src="/iconsplus/leftone50.png"/>이전</button>
-                </div>
-                <div class="eximgfield">
-                    <img class="eximgcontent"
-                         src="/image/키오스크1.png"
-                         alt="kiosk">/>
-                </div>
-                <div class="exright">
-                    <button  type="button" onclick="alert('Hi')" class="exnextbt"><img src="/iconsplus/rightone50.png"/>다음</button>
-                </div>
-                
-            </div>
-            <div class="exfield">설명란</div>
-           
+          <div class="ei104_149_9_13"></div>
+          <div class="exone"><a href="exsub4.html"><img style="width: 100%; height: 100%;" src="/img/키오스크1.png" alt="kiosk"></a></div>
+          <div class="extwo"><a href="exsub4.html"><img style="width: 100%; height: 100%;" src="/img/card1.jpg" alt="card1"></a></div>
+          <div class="exthree"><a href="exsub4.html"><img style="width: 100%; height: 100%;" src="/img/card2.jpg" alt="card2"></a></div>
+          <span  class="ei104_149_9_21">설명</span>
+          <div class=ei104_149_23_6>
+            <a  href="exsub4.html"class="ei104_149_23_9"><img src="/iconsplus/plus50.png"><span class="extra">더보기</span></a>
+            <div class="ei104_149_104_17"></div>
+          </div>
+
+        </div>
+        <div class=communitycol>
+          <div class="ei104_190_13_37"></div><span  class="ei104_190_13_38">커뮤니티</span>
+          <ul  class="ei104_190_13_40">
+            <li>제목</li>
+            <li>제목</li>
+            <li>제목</li>
+         </ul>
+        </div>
+        <div class=noticecol>
+          <div class="ei104_186_13_41"></div><span  class="ei104_186_13_42">공지사항</span>
+          <ul class="ei104_186_13_43">
+            <li>제목</li>
+            <li>제목</li>
+            <li>제목</li>
+      </ul>
+        </div>
     </div>
     <div id="rightcol">
         <div class=e101_6>

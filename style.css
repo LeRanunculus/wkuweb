@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.menu-box {
+    width: 187px;
+    height: 190px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.menu-button {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+    background-color: #333;
+}

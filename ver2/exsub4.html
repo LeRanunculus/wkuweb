@@ -5,6 +5,11 @@
         height:1024px;
         position:absolute;
     }
+    #maincol{
+        width: 1440px;
+    height: 904px;
+    display: flex;
+    }
     #header{
         width:1440px;
         height:120px;
@@ -23,12 +28,35 @@
         letter-spacing:0;
     }
     .loginbox { 
-        border: 3px solid rgba(255, 168.30000668764114, 0, 1);
-        width:179px;
-        height:757px;
-        position:absolute;
-        left:144px;
-        top:122px;
+        position: absolute;
+        left: 144;
+        border: 1px solid orange;
+        width: 190px;
+        height: 700px;
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        justify-content: space-around;
+        box-sizing: border-box;
+    }
+    .menu-button {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 10px;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        color: white;
+        font-size: 30px;
+        transition: background-color 0.3s;
+    }
+    
+    .menu-button:hover {
+        background-color: orange;
     }
     .ei104_215_9_24 { 
         background-color:rgba(0, 0, 0, 1);
@@ -570,22 +598,13 @@
         </header>
         <div id="maincol">
         <div class=loginbox>
-          <div class="ei104_215_9_24"></div>
-          <div class="ei104_215_13_31"></div>
-          <div class="ei104_215_13_32"></div>
-          <div class="menubox33"></div>
-          <div class="menubox34"></div>
-          <div class="menubox35"></div>
-          <div class="menubox36"></div>
-          <div class="menubox37"></div>
-          <a  href='login2.html' class="ei104_215_13_33">로그인</a>
-          <a href="login2.html"  class="ei104_215_13_34">회원가입</a>
-          <a  href='#' class="servicebt">서비스</a>
-          <a  href='ex.html' class="combt">커뮤니티</a>
-          <a href="#"  class="noticebt">공지사항</a>
-          <a href="#"  class="mypagebt">마이페이지</a>
-          <a href="#"  class="aboutbt">소개</a>
-
+            <div onclick="location.href='main2.html';" class="menu-button">메인페이지</div>
+            <div onclick="location.href='login2.html';" class="menu-button">로그인</div>
+            <div onclick="location.href='login2.html';" class="menu-button">회원가입</div>
+            <div  onclick="location.href='exsub4.html';" class="menu-button">설명</div>
+            <div  onclick="location.href='notice.html';" class="menu-button">공지사항</div>
+            <div  onclick="location.href='my2.html';" class="menu-button">마이페이지</div>
+            <div  onclick="location.href='about.html';" class="menu-button">소개</div>
         </div>
         <div class="excol">
             <div class="exNames">제목설명1</div>
