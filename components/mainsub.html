@@ -7,11 +7,16 @@
         width:1440px;
         height:1024px;
         position:absolute;
-    
+    }
+    #maincol{
+        width: 1440px;
+        height: 904px;
+        display: flex;
     }
     #header{
         width:1440px;
         height:120px;
+        display: flex;
         /* border: 3px solid blue; */
     }
     .e9_10 { 
@@ -28,35 +33,12 @@
         letter-spacing:0;
     }
     .loginbox { 
-        position: absolute;
-        left: 144;
-        border: 1px solid orange;
-        width: 190px;
-        height: 700px;
-        background-color: black;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-        justify-content: space-around;
-        box-sizing: border-box;
-    }
-    .menu-button {
-        width: 100%;
-        padding: 10px;
-        text-align: center;
-        margin-bottom: 10px;
-        cursor: pointer;
-        border: none;
-        background-color: transparent;
-        color: white;
-        font-size: 30px;
-        transition: background-color 0.3s;
-    }
-    
-    .menu-button:hover {
-        background-color: orange;
+        border: 3px solid rgba(255, 168.30000668764114, 0, 1);
+        width:179px;
+        height:757px;
+        position:absolute;
+        left:144px;
+        top:122px;
     }
     .ei104_215_9_24 { 
         background-color:rgba(0, 0, 0, 1);
@@ -65,9 +47,6 @@
         position:absolute;
         left:0px;
         top:0px;
-    }
-    .i104_215_9_24 { 
-        border:6px solid rgba(255, 168.30000668764114, 0, 1);
     }
     .ei104_215_13_31 { 
         background-color:rgba(255, 168.30000668764114, 0, 1);
@@ -125,33 +104,7 @@
         left:12px;
         top:450px; 
     }
-    .exNames {
-        /* border: 3px solid black; */
-        width: 640px;
-        height: 50;
-        position: relative;
-        text-align: center;
-        left: 2px;
-        top: 5;
-        font-size: 35px;
-      
-    }
-    .eximg{
-        /* border: 3px solid red; */
-        width: 640px;
-        height: 500px;
-        position: relative;
-        left: 2px;
-        top: 2px;
-    }
-    .exFields {
-        border: 3px solid black;
-        width: 640px;
-        height: 170px;
-        position: relative;
-        left: 2px;
-        top: 26px;
-    }
+    
     .ei104_215_13_33 { 
         text-decoration: none;
         color:rgba(0, 0, 0, 1);
@@ -260,7 +213,7 @@
         left:0px;
         top:0px;
     }
-    .ei104_149_9_14 { 
+    .exone { 
         background-color:rgba(255, 255, 255, 1);
         width:171px;
         height:258px;
@@ -268,7 +221,7 @@
         left:29px;
         top:90px;
     }
-    .ei104_149_9_15 { 
+    .extwo { 
         background-color:rgba(255, 255, 255, 1);
         width:171px;
         height:258px;
@@ -276,7 +229,7 @@
         left:240px;
         top:90px;
     }
-    .ei104_149_9_16 { 
+    .exthree { 
         background-color:rgba(255, 255, 255, 1);
         width:171px;
         height:258px;
@@ -301,7 +254,7 @@
         height:76px;
         position:absolute;
         left:293px;
-        top:375px;
+        top:320px;
     }
     .ei104_149_23_9 { 
         color:rgba(0, 0, 0, 1);
@@ -314,10 +267,15 @@
         text-align:left;
         font-size:24px;
         letter-spacing:0;
+        text-decoration: none;
+    }
+    .extra{
+        position: relative;
+        right: 5px;
     }
     .ei104_149_104_17 { 
         /* background-color:rgba(0, 0, 0, 1); */
-        background-image: url(/iconsplus/plus50.png);
+        /* background-image: url(/iconsplus/plus50.png); */
         width:53px;
         height:47px;
         position:absolute;
@@ -333,7 +291,7 @@
         top:650px;
     }
     .noticecol { 
-        /* border: 3px solid red; */
+        /* border: 3px ridge black; */
         width:272px;
         height:192px;
         position:absolute;
@@ -367,8 +325,7 @@
         width:81px;
         height:116px;
         position:absolute;
-        left:7px;
-        top:76px;
+        top:50px;
         font-family:Inter;
         text-align:left;
         font-size:24px;
@@ -401,8 +358,7 @@
         width:81px;
         height:116px;
         position:absolute;
-        left:7px;
-        top:76px;
+        top:50px;
         font-family:Inter;
         text-align:left;
         font-size:24px;
@@ -486,188 +442,57 @@
         background-repeat:no-repeat;
         background-size:cover;
     }
-    .excol { 
-        border: 3px solid black;
-        width:650px;
-        height:757px;
-        position:absolute;
-        left:346px;
-        top:122px;
-    }
-
-    #progress-bar {
-        width: 100%;
-        height: 315px;
-        background-color: rgb(115, 78, 4);
-        margin-top: 10px;
-        border-radius: 5px;
-        overflow: hidden;
-        position: relative; /* Added for positioning the text element */
-    }
-
-    #progress {
-        height: 100%;
-        background-color: rgb(30, 177, 7);
-        width: 0;
-        transition: width 0.3s ease;
-    }
-
-    #progress-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #fff;
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    .checkbox-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 20px;
-    }
-
-    .left-checkboxes, .right-checkboxes {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    input[type="checkbox"] {
-        margin: 20px;
-    }
-
-    label {
-        cursor: pointer;
-    }
-
-    .achievement-stamp-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .achievement-stamp {
-        position: relative;
-        display: inline-block;
-        margin: 5px;
-        width: 100px;
-        height: 100px;
-        background-color: #a74caf;
-        border-radius: 50%;
-        cursor: pointer;
-    }
-
-    .achieved-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: rgb(199, 196, 196);
-        font-size: 12px;
-    }
-
-    #achievement-text {
-        font-size: 50px;
-        font-weight: bold;
-        margin: 10px;
-        text-align: center;
-    }
-</style>
-
+    
     </style>
     <div class=wrap>
-        <header id="header" style="display: flex;">
-            <a href="main.html"  class="e9_10">For All</a>
+        <header id="header">
+            <a href="main2.html"  class="e9_10">For All</a>
         </header>
         <div id="maincol">
-            <div class=loginbox>
-                <div onclick="location.href='main2.html';" class="menu-button">메인페이지</div>
-                <div onclick="location.href='login2.html';" class="menu-button">로그인</div>
-                <div onclick="location.href='login2.html';" class="menu-button">회원가입</div>
-                <div  onclick="location.href='exsub4.html';" class="menu-button">설명</div>
-                <div  onclick="location.href='notice.html';" class="menu-button">공지사항</div>
-                <div  onclick="location.href='my2.html';" class="menu-button">마이페이지</div>
-                <div  onclick="location.href='about.html';" class="menu-button">소개</div>
-            </div>
-        
-        <div class="excol">
-            
-            <div class="eximg">
-                
-                <div id="achievement-text">달성도</div>
-            
-                <div class="checkbox-container">
-                    <div class="left-checkboxes">
-                        <input type="checkbox" id="checkbox1" onclick="updateProgress()">
-                        <label for="checkbox1">키오스크 사용법</label>
-            
-                        <input type="checkbox" id="checkbox2" onclick="updateProgress()">
-                        <label for="checkbox2">스마트폰 원하는 어플 다운 방법</label>
-            
-                        <input type="checkbox" id="checkbox3" onclick="updateProgress()">
-                        <label for="checkbox3">페이 결제 방법</label>
-                    </div>
-            
-                    <div class="right-checkboxes">
-                        <input type="checkbox" id="checkbox4" onclick="updateProgress()">
-                        <label for="checkbox4">워드 사용법</label>
-            
-                        <input type="checkbox" id="checkbox5" onclick="updateProgress()">
-                        <label for="checkbox5">파워포인트 사용법</label>
-            
-                        <input type="checkbox" id="checkbox6" onclick="updateProgress()">
-                        <label for="checkbox6">블로그 만드는 방법</label>
-                    </div>
-                </div>
-            
-                <div class="achievement-stamp-container">
-                    <span id="stamp1" class="achievement-stamp" onclick="toggleCheckbox(1)"><span class="achieved-text">달성!</span></span>
-                    <span id="stamp2" class="achievement-stamp" onclick="toggleCheckbox(2)"><span class="achieved-text">달성!</span></span>
-                    <span id="stamp3" class="achievement-stamp" onclick="toggleCheckbox(3)"><span class="achieved-text">달성!</span></span>
-                    <span id="stamp4" class="achievement-stamp" onclick="toggleCheckbox(4)"><span class="achieved-text">달성!</span></span>
-                    <span id="stamp5" class="achievement-stamp" onclick="toggleCheckbox(5)"><span class="achieved-text">달성!</span></span>
-                    <span id="stamp6" class="achievement-stamp" onclick="toggleCheckbox(6)"><span class="achieved-text">달성!</span></span>
-                </div>
-
-                <div id="progress-bar">
-                    <div id="progress"></div>
-                    <div id="progress-text">0%</div>
-                </div>
-            
-                <script>
-                    function updateProgress() {
-                        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-                        var checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-                        var progress = (checkedCheckboxes.length / checkboxes.length) * 100;
-                
-                        document.getElementById('progress').style.width = progress + '%';
-                        document.getElementById('progress-text').innerText = Math.round(progress) + '%';
-                
-                        // 업데이트된 진행도에 따라 도장 표시
-                        for (var i = 0; i < checkboxes.length; i++) {
-                            var stampId = 'stamp' + (i + 1);
-                            var stampElement = document.getElementById(stampId);
-                
-                            if (i < checkedCheckboxes.length) {
-                                stampElement.style.backgroundColor = '#a74caf';
-                            } else {
-                                stampElement.style.backgroundColor = 'transparent';
-                            }
-                        }
-                    }
-                
-                    function toggleCheckbox(index) {
-                        var checkboxId = 'checkbox' + index;
-                        var checkbox = document.getElementById(checkboxId);
-                        checkbox.checked = !checkbox.checked;
-                        updateProgress();
-                    }
-                </script>
-            
+        <div class=loginbox>
+          <div class="ei104_215_9_24"></div>
+          <div class="ei104_215_13_31"></div>
+          <div class="ei104_215_13_32"></div>
+          <div class="menubox33"></div>
+          <div class="menubox34"></div>
+          <div class="menubox35"></div>
+          <div class="menubox36"></div>
+          <div class="menubox37"></div>
+          <a  href='login2.html' class="ei104_215_13_33">로그인</a>
+          <a href="login2.html"  class="ei104_215_13_34">회원가입</a>
+          <a  href='exsub4.html' class="servicebt">서비스</a>
+          <a  href='com2.html' class="combt">커뮤니티</a>
+          <a href="notice.html"  class="noticebt">공지사항</a>
+          <a href="my2.html"  class="mypagebt">마이페이지</a>
+          <a href="about.html"  class="aboutbt">소개</a>
         </div>
+        <div class="excol">
+          <div class="ei104_149_9_13"></div>
+          <div class="exone"><a href="exsub4.html"><img style="width: 100%; height: 100%;" src="/img/키오스크1.png" alt="kiosk"></a></div>
+          <div class="extwo"><a href="exsub4.html"><img style="width: 100%; height: 100%;" src="/img/card1.jpg" alt="card1"></a></div>
+          <div class="exthree"><a href="exsub4.html"><img style="width: 100%; height: 100%;" src="/img/card2.jpg" alt="card2"></a></div>
+          <span  class="ei104_149_9_21">설명</span>
+          <div class=ei104_149_23_6>
+            <a  href="exsub4.html"class="ei104_149_23_9"><img src="/iconsplus/plus50.png"><span class="extra">더보기</span></a>
+            <div class="ei104_149_104_17"></div>
+          </div>
+
+        </div>
+        <div class=communitycol>
+          <div class="ei104_190_13_37"></div><span  class="ei104_190_13_38">커뮤니티</span>
+          <ul  class="ei104_190_13_40">
+            <li>제목</li>
+            <li>제목</li>
+            <li>제목</li>
+         </ul>
+        </div>
+        <div class=noticecol>
+          <div class="ei104_186_13_41"></div><span  class="ei104_186_13_42">공지사항</span>
+          <ul class="ei104_186_13_43">
+            <li>제목</li>
+            <li>제목</li>
+            <li>제목</li>
+      </ul>
         </div>
     </div>
     <div id="rightcol">
