@@ -1,13 +1,23 @@
 <style>
+    /* .wrap { 
+        overflow:hidden;
+    } */
     .wrap { 
         background-color:rgba(255, 255, 255, 1);
         width:1440px;
         height:1024px;
         position:absolute;
     }
+    #maincol{
+        width: 1440px;
+        height: 904px;
+        display: flex;
+    }
     #header{
         width:1440px;
         height:120px;
+        display: flex;
+        /* border: 3px solid blue; */
     }
     .e9_10 { 
         text-decoration: none;
@@ -23,12 +33,35 @@
         letter-spacing:0;
     }
     .loginbox { 
-        border: 3px solid rgba(255, 168.30000668764114, 0, 1);
-        width:179px;
-        height:757px;
-        position:absolute;
-        left:144px;
-        top:122px;
+        position: absolute;
+        left: 144;
+        border: 1px solid orange;
+        width: 190px;
+        height: 700px;
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        justify-content: space-around;
+        box-sizing: border-box;
+    }
+    .menu-button {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 10px;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        color: white;
+        font-size: 30px;
+        transition: background-color 0.3s;
+    }
+    
+    .menu-button:hover {
+        background-color: orange;
     }
     .ei104_215_9_24 { 
         background-color:rgba(0, 0, 0, 1);
@@ -198,132 +231,6 @@
         left:346px;
         top:122px;
     }
-    .exname{
-        /* border: 3px solid black; */
-        width: 640px;
-        height: 50;
-        position: relative;
-        text-align: center;
-        left: 2px;
-        top: 5;
-        font-size: 35px;
-    }
-    .eximg{
-        /* border: 3px solid red; */
-        width: 640px;
-        height: 500px;
-        position: relative;
-        left: 2px;
-        top: 2px;
-    }
-    .exfield{
-        border: 3px solid black;
-        width: 640px;
-        height: 170px;
-        position: relative;
-        left: 2px;
-        top: 26px;
-    }
-    .exleft{
-        /* border: 3px solid blue; */
-        float: left; width: 8%;
-        height: inherit;
-    }
-    /* slideshow 컨테이너의 디자인 */
-    .slideshow-container{
-        /* * {box-sizing:border-box}  */
-        float: left; width: 78%;
-        position: relative;
-        left: 20px;
-        height: inherit;
-        margin: auto;
-    }
-
-    /* 이미지를 숨기는데 사용 */
-    .mySlides {
-    display: none;
-}
-
-/* 다음, 이전 버튼 */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 45%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: black;
-  font-weight: bold;
-  font-size: 60px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
-/* "다음 버튼"을 오른쪽에 위치 */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-/* 마우스를 올리면 배경색을 변경 */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-/* 캡션 부분 */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-/* 숫자 부분 위에 적은 (1/3) <-- 이런거 */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-/* 하단의 점들 */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-.active, .dot:hover {
-  background-color: #717171;
-}
-/* 페이드 효과 */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-    .eximgcontent{
-        /* width:100%; */
-        height:100%;
-        object-fit:inherit;
-    }
-    .exright{
-        /* border: 3px solid blue; */
-        float: right; width: 8%;
-        height: inherit;
-    }
     .ei104_149_9_13 { 
         background-color:rgba(255, 168.30000668764114, 0, 1);
         width:650px;
@@ -332,7 +239,7 @@
         left:0px;
         top:0px;
     }
-    .ei104_149_9_14 { 
+    .exone { 
         background-color:rgba(255, 255, 255, 1);
         width:171px;
         height:258px;
@@ -340,7 +247,7 @@
         left:29px;
         top:90px;
     }
-    .ei104_149_9_15 { 
+    .extwo { 
         background-color:rgba(255, 255, 255, 1);
         width:171px;
         height:258px;
@@ -348,7 +255,7 @@
         left:240px;
         top:90px;
     }
-    .ei104_149_9_16 { 
+    .exthree { 
         background-color:rgba(255, 255, 255, 1);
         width:171px;
         height:258px;
@@ -373,7 +280,7 @@
         height:76px;
         position:absolute;
         left:293px;
-        top:375px;
+        top:320px;
     }
     .ei104_149_23_9 { 
         color:rgba(0, 0, 0, 1);
@@ -386,10 +293,15 @@
         text-align:left;
         font-size:24px;
         letter-spacing:0;
+        text-decoration: none;
+    }
+    .extra{
+        position: relative;
+        right: 5px;
     }
     .ei104_149_104_17 { 
         /* background-color:rgba(0, 0, 0, 1); */
-        background-image: url(/iconsplus/plus50.png);
+        /* background-image: url(/iconsplus/plus50.png); */
         width:53px;
         height:47px;
         position:absolute;
@@ -405,7 +317,7 @@
         top:650px;
     }
     .noticecol { 
-        /* border: 3px solid red; */
+        /* border: 3px ridge black; */
         width:272px;
         height:192px;
         position:absolute;
@@ -439,8 +351,7 @@
         width:81px;
         height:116px;
         position:absolute;
-        left:7px;
-        top:76px;
+        top:50px;
         font-family:Inter;
         text-align:left;
         font-size:24px;
@@ -473,8 +384,7 @@
         width:81px;
         height:116px;
         position:absolute;
-        left:7px;
-        top:76px;
+        top:50px;
         font-family:Inter;
         text-align:left;
         font-size:24px;
@@ -558,72 +468,193 @@
         background-repeat:no-repeat;
         background-size:cover;
     }
-    
+    table {
+	  border-collapse: separate;
+	  width:100%;
+      height: 100%;
+	  background-color: white;
+	}
+	th, td {
+	  padding: 8px;
+	  text-align: left;
+	  border-bottom: 1px solid #ddd;
+	  text-align: center;
+	}
+	th {
+	background: #FFA800;
+	color: #000;
+	width: 925px;
+	height: 54px;
+	color: #000;
+	font-family: Inter;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	}
+	tbody tr:hover {
+	  background-color: #d3d3d3;
+	  opacity: 0.9;
+	  cursor: pointer;
+	}
+	th:nth-child(1),
+	td:nth-child(1) {
+	  width: 10%;
+	}
+	th:nth-child(2),
+	td:nth-child(2) {
+	  width: 60%;
+	}
+	th:nth-child(3),
+	td:nth-child(3) {
+	  width: 15%;
+	}
+	th:nth-child(4),
+	td:nth-child(4) {
+	  width: 15%;
+	}
+	.boreder_style{
+		border-radius: 17px;
+	}
+	.paging { 
+		color:rgba(0, 0, 0, 1);
+		width:100px;
+		height:24px;
+		position:absolute;
+		left:734px;
+		top:893px;
+		font-family:Inter;
+		text-align:left;
+		font-size:20px;
+		letter-spacing:0;
+	}
+	a {
+	  text-decoration: none;
+	}
     </style>
     <div class=wrap>
-        <header id="header" style="display: flex;">
-            <a href="main.html"  class="e9_10">For All</a>
+        <header id="header">
+            <a href="main2.html"  class="e9_10">For All</a>
         </header>
         <div id="maincol">
-        <div class=loginbox>
-          <div class="ei104_215_9_24"></div>
-          <div class="ei104_215_13_31"></div>
-          <div class="ei104_215_13_32"></div>
-          <div class="menubox33"></div>
-          <div class="menubox34"></div>
-          <div class="menubox35"></div>
-          <div class="menubox36"></div>
-          <div class="menubox37"></div>
-          <a  href='login2.html' class="ei104_215_13_33">로그인</a>
-          <a href="login2.html"  class="ei104_215_13_34">회원가입</a>
-          <a  href='#' class="servicebt">서비스</a>
-          <a  href='ex.html' class="combt">커뮤니티</a>
-          <a href="#"  class="noticebt">공지사항</a>
-          <a href="#"  class="mypagebt">마이페이지</a>
-          <a href="#"  class="aboutbt">소개</a>
-
-        </div>
-        <div class="excol">
-            <div class="exname">제목설명</div>
-            <div class="eximg">
-                <div class="exleft">
-                    <a class="prev" onclick="plusSlides(-1)" >&#10094;</a>
-                </div>
-                <!--슬라이드쇼 컨테이너-->
-                <div class="slideshow-container"> 
-                    <!-- 컨테이너이미지들-->
-                    <div class="mySlides fade">
-                        <div class="numbertext">1 / 3</div>
-                        <img src="/img/키오스크1.png" style="width: 100%; height: 100%;" alt="kiosk">
-                        <div class="text">첫 번째 사진</div>
-                    </div>
-
-                    <div class="mySlides fade">
-                        <div class="numbertext">2 / 3</div>
-                        <img src="/img/card1.jpg" style="width: 100%; height: 100%;" alt="kiosk">
-                        <div class="text">두 번째 사진</div>
-                    </div>
-
-                    <div class="mySlides fade">
-                        <div class="numbertext">3 / 3</div>
-                        <img src="/img/card2.jpg" style="width: 100%; height: 100%;" alt="kiosk">
-                        <div class="text">세 번째 사진</div>
-                    </div>
-                    <!-- 현재 이미지를 알려주는 하단의 점 -->
-                        <div style="text-align:center">
-                            <span class="dot" onclick="currentSlide(1)"></span> 
-                            <span class="dot" onclick="currentSlide(2)"></span> 
-                            <span class="dot" onclick="currentSlide(3)"></span> 
-                        </div>
-                </div>
-                <!--다음, 이전 이미지 버튼-->
-                <div class="exright">
-                    <a class="next" onclick="plusSlides(1)" >&#10095;</a>
-                </div>
-                
+            <div class=loginbox>
+                <div onclick="location.href='main2.html';" class="menu-button">메인페이지</div>
+                <div onclick="location.href='login2.html';" class="menu-button">로그인</div>
+                <div onclick="location.href='login2.html';" class="menu-button">회원가입</div>
+                <div  onclick="location.href='exsub4.html';" class="menu-button">설명</div>
+                <div  onclick="location.href='notice.html';" class="menu-button">공지사항</div>
+                <div  onclick="location.href='my2.html';" class="menu-button">마이페이지</div>
+                <div  onclick="location.href='about.html';" class="menu-button">소개</div>
             </div>
-            <div class="exfields">설명란</div>
-           
+        <div class="excol">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>작성자</th>
+                            <th>시간</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="center">1</td>
+                            <td class="left">제목</td>
+                            <td class="left">작성자</td>
+                            <td class="left">시간</td>
+                        </tr>
+                        <tr class="tr_td">
+                            <td class="center">2</td>
+                            <td class="left">제목</td>
+                            <td class="left">작성자</td>
+                            <td class="left">시간</td>
+                        </tr>
+                        <tr class="tr_td">
+                            <td class="center">3</td>
+                            <td class="left">제목</td>
+                            <td class="left">작성자</td>
+                            <td class="left">시간</td>
+                        </tr>
+                        <tr class="tr_td">
+                            <td class="center">4</td>
+                            <td class="left">제목</td>
+                            <td class="left">작성자</td>
+                            <td class="left">시간</td>
+                        </tr>
+                        <tr class="tr_td">
+                            <td class="center">5</td>
+                            <td class="left">제목</td>
+                            <td class="left">작성자</td>
+                            <td class="left">시간</td>
+                        </tr>
+                        <tr class="tr_td">
+                            <td class="center">6</td>
+                            <td class="left">제목</td>
+                            <td class="left">작성자</td>
+                            <td class="left">시간</td>
+                        </tr>
+                        <tr class="tr_td">
+                            <td class="center">7</td>
+                            <td class="left">제목</td>
+                            <td class="left">작성자</td>
+                            <td class="left">시간</td>
+                        </tr>
+                        <tr class="tr_td">
+                            <td class="center">8</td>
+                            <td class="left">제목</td>
+                            <td class="left">작성자</td>
+                            <td class="left">시간</td>
+                        </tr>
+                        <tr class="tr_td">
+                            <td class="center">9</td>
+                            <td class="left">제목</td>
+                            <td class="left">작성자</td>
+                            <td class="left">시간</td>
+                        </tr>
+                        <tr class="tr_td">
+                            <td class="center">10</td>
+                            <td class="left">제목</td>
+                            <td class="left">작성자</td>
+                            <td class="left">시간</td>
+                        </tr>
+                        <tr class="tr_td">
+                            <td class="center">11</td>
+                            <td class="left">제목</td>
+                            <td class="left">작성자</td>
+                            <td class="left">시간</td>
+                        </tr>
+                        <tr class="tr_td">
+                            <td class="center">12</td>
+                            <td class="left">제목</td>
+                            <td class="left">작성자</td>
+                            <td class="left">시간</td>
+                        </tr>
+                        <tr class="tr_td">
+                            <td class="center">13</td>
+                            <td class="left">제목</td>
+                            <td class="left">작성자</td>
+                            <td class="left">시간</td>
+                        </tr>
+                        <tr class="tr_td">
+                            <td class="center">14</td>
+                            <td class="left">제목</td>
+                            <td class="left">작성자</td>
+                            <td class="left">시간</td>
+                        </tr>
+                        <tr class="tr_td">
+                            <td class="center">15</td>
+                            <td class="left">제목</td>
+                            <td class="left">작성자</td>
+                            <td class="left">시간</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- <div class="paging" >
+                    <a href  = "https://www.naver.com/">1</a>  
+                </div> -->
+                
+          </div>
+        </div>
     </div>
     <div id="rightcol">
         <div class=e101_6>
@@ -635,34 +666,3 @@
           </div>
     </div>
       </div>
-
-<script>
-        var slideIndex = 1;
-showSlides(slideIndex);
-
-// 다음, 이전 제어
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// 사진 제어
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1} 
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block"; 
-  dots[slideIndex-1].className += " active";
-}
-      </script>
