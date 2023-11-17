@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Click Audio Player</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #audio-player {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Image tags for play and stop buttons -->
+  <img id="playButton" src="/iconsplus/mike50.png" alt="Play Button" onclick="playAudio()">
+  <img id="stopButton" hidden="true" src="/iconsplus/mikemut2.png" alt="Stop Button" onclick="stopAudio()">
+
+  <!-- Audio player -->
+  <audio id="audio-player" controls>
+    <source src="/mp3/03. The Castle.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    // Get references to the audio player and buttons
+    var audioPlayer = document.getElementById('audio-player');
+    var playButton = document.getElementById('playButton');
+    var stopButton = document.getElementById('stopButton');
+
+    // Function to play audio
+    function playAudio() {
+      audioPlayer.play();
+      playButton.style.display = 'none';
+      stopButton.style.display = 'inline';
+    }
+
+    // Function to stop audio
+    function stopAudio() {
+      audioPlayer.pause();
+      audioPlayer.currentTime = 0;
+      playButton.style.display = 'inline';
+      stopButton.style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>

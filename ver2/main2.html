@@ -389,7 +389,10 @@
         font-size:24px;
         letter-spacing:0;
     }
-    .e101_6 { 
+    #audio-player {
+      display: none;
+    }
+    .right-container { 
         border: 3px solid black;
         width:86px;
         height:225px;
@@ -397,7 +400,7 @@
         left:1030px;
         top:650px;
     }
-    .ei101_6_107_117 { 
+    .right-background { 
         background-color:rgba(255, 168.30000668764114, 0, 1);
         width:86px;
         height:225px;
@@ -405,7 +408,7 @@
         left:0px;
         top:0px;
     }
-    .ei101_6_23_14 { 
+    .text-help { 
         color:rgba(0, 0, 0, 1);
         width:45px;
         height:29px;
@@ -417,28 +420,28 @@
         font-size:24px;
         letter-spacing:0;
     }
-    .ei101_6_23_15 { 
+    .text-voice { 
         color:rgba(0, 0, 0, 1);
         width:45px;
         height:29px;
         position:absolute;
-        left:20px;
-        top:80px;
+        left:24px;
+        top:85px;
         font-family:Inter;
         text-align:left;
         font-size:24px;
         letter-spacing:0;
     }
-    .ei101_6_23_16 { 
+    .right-help { 
         border-radius:500px;
         background-color:rgba(255, 255, 255, 1);
         width:71px;
         height:73px;
         position:absolute;
         left:7px;
-        top:126px;
+        top:119px;
     }
-    .ei101_6_23_17 { 
+    .right-voice { 
         border-radius:500px;
         background-color:rgba(255, 255, 255, 1);
         width:71px;
@@ -447,27 +450,24 @@
         left:7px;
         top:10px;
     }
-    .ei101_6_95_2 { 
+    .img-voice { 
         width:58px;
         height:58px;
         position:absolute;
-        left:13px;
-        top:18px;
-        background-image:url(/iconsplus/mike50.png);
+        left:11px;
+        top:10px;
         background-repeat:no-repeat;
         background-size:cover;
     }
-    .ei101_6_95_3 { 
+    .img-help { 
         width:58px;
         height:58px;
         position:absolute;
-        left:13px;
-        top:134px;
-        background-image:url(/iconsplus/questionmark50.png);
+        left:10px;
+        top:10px;
         background-repeat:no-repeat;
         background-size:cover;
     }
-    
     </style>
     <div class=wrap>
         <header id="header">
@@ -513,14 +513,41 @@
         </div>
     </div>
     <div id="rightcol">
-        <div class=e101_6>
-            <div class="ei101_6_107_117"></div>
-            <span  class="ei101_6_23_14">도움</span>
-            <span  class="ei101_6_23_15">음성</span>
-            <div class="ei101_6_23_16"></div>
-            <div class="ei101_6_23_17"></div>
-            <div class="ei101_6_95_2"><audio controls></audio></div>
-            <div class="ei101_6_95_3"></div>
+        <div class=right-container>
+            <div class="right-background">
+                <div class="right-voice">
+                    <div class="img-voice"><img id="playButton" src="/iconsplus/mike50.png" alt="Play Button" onclick="playAudio()">
+                        <img id="stopButton" hidden="true" src="/iconsplus/mikemut2.png" alt="Stop Button" onclick="stopAudio()"><audio controls hidden="true"></audio></div>
+                </div><span  class="text-voice">음성</span>
+                <div class="right-help">
+                    <div class="img-help"><img src="iconsplus/questionmark50.png"><audio controls hidden="true"></audio></div>
+                </div><span  class="text-help">도움</span>
+                <audio id="audio-player" controls>
+                    <source src="/mp3/03. The Castle.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                  </audio>
+            </div>
           </div>
     </div>
       </div>
+      <script>
+        // Get references to the audio player and buttons
+        var audioPlayer = document.getElementById('audio-player');
+        var playButton = document.getElementById('playButton');
+        var stopButton = document.getElementById('stopButton');
+    
+        // Function to play audio
+        function playAudio() {
+          audioPlayer.play();
+          playButton.style.display = 'none';
+          stopButton.style.display = 'inline';
+        }
+    
+        // Function to stop audio
+        function stopAudio() {
+          audioPlayer.pause();
+          audioPlayer.currentTime = 0;
+          playButton.style.display = 'inline';
+          stopButton.style.display = 'none';
+        }
+      </script>
